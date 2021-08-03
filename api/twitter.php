@@ -4,7 +4,7 @@ $url = 'https://api.twitter.com/1.1/users/show.json'."?".$query;
 // use key 'http' even if you send the request to https://...
 $options = array(
 'http' => array(
-'header'  => "Bearer: ".getallheaders()["Bearer"]."\n",
+'header'  => "Authorization: ".getallheaders()["Authorization"]."\n",
 'method'  => 'GET'
 )
 );
