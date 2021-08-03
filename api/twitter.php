@@ -1,5 +1,5 @@
 <?php
-$url = 'http://api.twitter.com';
+$url = 'https://api.twitter.com/1.1/users/show.json';
 
 // use key 'http' even if you send the request to https://...
 $options = array(
