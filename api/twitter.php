@@ -5,9 +5,9 @@ $query = $_SERVER["QUERY_STRING"];
 // make request
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-    'Authorization: '. $_SERVER['HTTP_AUTHORIZATION']
+    'Authorization: Bearer-Token '.getenv("apikey")
 ));
-curl_setopt($ch, CURLOPT_URL, 'https://api.twitter.com/1.1/users/show.json'."?".$query);
+curl_setopt($ch, CURLOPT_URL, 'https://api.twitter.com/1.1/users/show.json?cursor=-1&screen_name=DiscordAnaxes&skip_status=true&include_user_entities=false');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $output = curl_exec($ch);
 echo($output);
