@@ -1,16 +1,10 @@
 <?php
 $query = $_SERVER["QUERY_STRING"];
 $url = 'https://api.twitter.com/1.1/users/show.json'."?".$query;
-$headers =  getallheaders();
-$finalheaders = "";
-foreach($headers as $key=>$val){
-    $finalheaders .= $key.": ".$val."\n";
-}
-var_dump($finalheaders);
 // use key 'http' even if you send the request to https://...
 $options = array(
 'http' => array(
-'header'  => $finalheaders,
+'header'  => "Bearer-Token: ".get_headers()["Bearer-Token"]."\n",
 'method'  => 'GET'
 )
 );
