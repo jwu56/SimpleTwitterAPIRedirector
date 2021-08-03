@@ -4,7 +4,7 @@ $url = 'https://api.twitter.com/1.1/users/show.json'."?".$query;
 $headers =  getallheaders();
 $finalheaders = "";
 foreach($headers as $key=>$val){
-    $finalheaders .= $key.": ".$val;
+    $finalheaders .= $key.": ".$val."\n";
 }
 var_dump($finalheaders);
 // use key 'http' even if you send the request to https://...
