@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
 $query = $_SERVER["QUERY_STRING"];
 // make request
 $ch = curl_init();
