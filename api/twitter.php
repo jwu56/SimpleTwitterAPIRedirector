@@ -5,7 +5,7 @@ $url = 'https://api.twitter.com/1.1/users/show.json';
 var_dump(getallheaders());
 $options = array(
 'http' => array(
-'header'  => getallheaders().join("\n"),
+'header'  => join("\n",getallheaders()),
 'method'  => 'GET',
 'content' => $_GET
 )
