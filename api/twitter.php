@@ -7,7 +7,7 @@ $options = array(
 'http' => array(
 'header'  => join("\n",getallheaders()),
 'method'  => 'GET',
-'content' => $_GET
+'content' => join("\n",$_GET)
 )
 );
 $context  = stream_context_create($options);
