@@ -1,4 +1,5 @@
 <?php
+var_dump($_ENV["apikey"]);
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 // make request
