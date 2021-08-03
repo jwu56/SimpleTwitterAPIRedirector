@@ -1,9 +1,8 @@
 <?php
 $query = $_SERVER["QUERY_STRING"];
 $url = 'https://api.twitter.com/1.1/users/show.json'."?".$query;
-
+var_dump(join("\n",getallheaders()));
 // use key 'http' even if you send the request to https://...
-var_dump(getallheaders());
 $options = array(
 'http' => array(
 'header'  => join("\n",getallheaders()),
